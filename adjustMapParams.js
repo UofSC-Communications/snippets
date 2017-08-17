@@ -1,21 +1,20 @@
-```
+`` `
 Used to adjust the parameters for the USC Map so the map can be rendered in an iframe.
 
-```
+` ``
 
-$( document ).ready(function() {
+$(document).ready(function() {
   if (window.location.search) {
-
 
     var searchString = window.location.search;
     //Check for Id param
-  if (getUrlParameter('id')===''){
+    if (getUrlParameter('id') === '') {
 
       //Set id to our map
       var id = '744';
 
       //prepend id param to the front of the search string
-      searchString = '?id='+id+'&'+searchString.slice(1,searchString.length);
+      searchString = '?id=' + id + '&' + searchString.slice(1, searchString.length);
       console.log(searchString);
 
     }
@@ -24,13 +23,16 @@ $( document ).ready(function() {
     //append url parameter to iframe
     var src = 'https://www.myatlascms.com/map/';
     src += searchString + window.location.hash;
-    $('iframe#map_frame').attr( "src", src );
+    $('iframe#map_frame').attr("src", src);
   }
 });
 
+//Parse query string to get param name.
 function getUrlParameter(name) {
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    var results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+  var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  var results = regex.exec(location.search);
+  return results === null
+    ? ''
+    : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
