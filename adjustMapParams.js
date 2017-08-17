@@ -4,7 +4,7 @@ Used to adjust the parameters for the USC Map so the map can be rendered in an i
 ` ``
 
 $(document).ready(function() {
-  if (window.location.search) {
+  if (window.location.search || window.location.hash) {
 
     var searchString = window.location.search;
     //Check for Id param
