@@ -1,15 +1,15 @@
 ```
 Used to adjust the parameters for the USC Map so the map can be rendered in an iframe.
-Not supported in IE.
+
 ```
 
 $( document ).ready(function() {
   if (window.location.search) {
 
-    var urlParams = new URLSearchParams(window.location.search);
+
     var searchString = window.location.search;
     //Check for Id param
-  if (!urlParams.get('id')){
+  if (getUrlParameter('id')===''){
 
       //Set id to our map
       var id = '744';
@@ -27,3 +27,10 @@ $( document ).ready(function() {
     $('iframe#map_frame').attr( "src", src );
   }
 });
+
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
