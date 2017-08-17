@@ -1,7 +1,7 @@
-"""
-Used to adjust the parameters for the USC Map so the map can be rendered in an iframe. 
-
-"""
+```
+Used to adjust the parameters for the USC Map so the map can be rendered in an iframe.
+Not supported in IE.
+```
 
 $( document ).ready(function() {
   if (window.location.search) {
