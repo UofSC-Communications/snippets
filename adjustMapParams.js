@@ -1,7 +1,8 @@
-`` `
-Used to adjust the parameters for the USC Map so the map can be rendered in an iframe.
+```
+Location: /visit/map
+Purpose: Used to adjust the parameters for the USC Map so the map can be rendered in an iframe.
 
-` ``
+```
 
 $(document).ready(function() {
   //Check to see if there is a query string or  hash string
