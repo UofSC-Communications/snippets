@@ -1,7 +1,7 @@
 ```
   Location: /study/majors_and_degrees/
-  Purpose: To push the value of the Major and Degree filster to Google Tag Manager
-  
+  Purpose: To push the value of the major and degree filter to GTM
+
 ```
 
 document.ready(function (){
