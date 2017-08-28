@@ -5,4 +5,4 @@ These are snippets used by USC Communications.
 
 - [adjustMapParams.js](https://github.com/UofSC-Communications/snippets/blob/master/adjustMapParams.js)
 - [mailchimpFormParse.js](https://github.com/UofSC-Communications/snippets/blob/master/mailchimpFormParse.js)
-- [DataLayerPush-MajorAndDegreeFilters](https://github.com/UofSC-Communications/snippets/blob/master/gtm-DataLayerPush-MajorAndDegreeFilter.js)
+- [dataLayerPush-MajorAndDegreeFilters.js](https://github.com/UofSC-Communications/snippets/blob/master/gtm-DataLayerPush-MajorAndDegreeFilter.js)
